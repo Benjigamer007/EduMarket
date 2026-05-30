@@ -97,7 +97,6 @@
             <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200">Todos</a></li>
             <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Más vendidos</a></li>
             <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Docente verificado</a></li>
-            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Con opiniones recientes</a></li>
           </ul>
         </div>
 
@@ -383,6 +382,10 @@
     </main>
 
   </div>
+
+
+
+<!-- popup de detalle -->
 <div id="popup" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
     <div class="bg-gray-100 w-full max-w-3xl max-h-screen overflow-y-auto flex-col flex justify-center items-center rounded-3xl relative">
         
@@ -424,19 +427,62 @@
             </ul>
         </div>
 
+      
+
         <div class="w-full px-6 pb-6">
             <button onclick="abrirPopupCompra()" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-700">
                 Comprar ahora — $45.00
             </button>
         </div>
 
+        <article class="w-full px-6 pb-6">
+          <h3 class="text-xl font-bold text-center mb-4">Reviews</h3>
+
+        <div class="flex flex-col gap-4">
+
+          <div class="bg-white rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <img src="https://i.pinimg.com/736x/6e/63/9f/6e639f47ecb930baeb9caa6c16fbbc93.jpg" 
+                   class="w-10 h-10 rounded-full object-cover">
+              <span class="font-semibold">Juan Pérez</span>
+              <span class="text-yellow-400">★★★★★</span>
+            </div>
+            <p class="text-gray-600 text-sm">Excelente curso, aprendí muchísimo. Lo recomiendo a todos.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <img src="https://i.pinimg.com/736x/a3/e3/6c/a3e36c27c8cd4931c4bec4c499fe90fa.jpg" 
+                   class="w-10 h-10 rounded-full object-cover">
+              <span class="font-semibold">María López</span>
+              <span class="text-yellow-400">★★★★☆</span>
+            </div>
+            <p class="text-gray-600 text-sm">Muy buen contenido, explicado de forma clara y simple.</p>
+          </div>
+
+
+          <div class="bg-white rounded-xl p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <img src="https://i.pinimg.com/736x/12/5b/6d/125b6d2998fe9bd52032a70a3ccceabc.jpg" 
+                   class="w-10 h-10 rounded-full object-cover">
+              <span class="font-semibold">Carlos Ruiz</span>
+              <span class="text-yellow-400">★★★★★</span>
+            </div>
+            <p class="text-gray-600 text-sm">El mejor curso que tomé. Pasé de cero a crear mi propio sitio web.</p>
+          </div>
+
+  </div>
+</article>
+
+       
+
     </div>
 </div>
 
 
-      <!-- cierre del popup de detalle -->
+      
 
-    <!-- Popup de compra -->
+<!-- popup de compra -->
     <div id="popup-compra" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
         <div class="bg-white w-full max-w-lg rounded-3xl p-8">
             
