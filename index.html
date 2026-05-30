@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMarket</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="bg-gray-50">
+
+  <header class="bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-4">
+    <nav class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+
+      <div class="text-2xl font-bold text-gray-900 shrink-0">
+        EduMarket
+      </div>
+
+      <div class="relative flex-1 w-full md:max-w-2xl">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+        </svg>
+        <input
+          id="buscador"
+          type="text"
+          placeholder="¿Qué quieres aprender hoy?"
+          class="w-full bg-gray-100 rounded-full pl-12 pr-6 py-3 text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
+>
+      </div>
+
+    </nav>
+  </header>
+
+  <nav class="bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-4 overflow-x-auto">
+    <ul class="flex items-center gap-4 sm:gap-6 lg:gap-12 min-w-max">
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Todos</a></li>
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Programación</a></li>
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Data Science</a></li>
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Diseño</a></li>
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Marketing</a></li>
+      <li><a href="#" class="block text-gray-800 font-semibold text-sm px-4 py-3 rounded-lg hover:bg-gray-200"> Bases de Datos</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex flex-col lg:flex-row min-h-screen">
+
+    <aside class="w-full lg:w-1/6 bg-gray-100 p-4">
+      
+      <h2 class="text-gray-800 font-semibold text-xl">Filtros</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-0">
+
+        <div>
+          <h3 class="text-gray-600 font-medium text-lg mt-4">Nivel</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Todos</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Principiante</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Intermedio</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Avanzado</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-gray-600 font-medium text-lg mt-4 lg:mt-6">Precio</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200">Todos</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Gratis</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Menos de $50</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Más de $50</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-gray-600 font-medium text-lg mt-4 lg:mt-6">Duración</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200">Todos</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Menos de 3 horas</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">3-10 horas</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Más de 10 horas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-gray-600 font-medium text-lg mt-4 lg:mt-6">Valoración</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200">Todas</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">4 estrellas o más</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">4.5 estrellas o más</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Mejor valorados</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-gray-600 font-medium text-lg mt-4 lg:mt-6">Confianza</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200">Todos</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Más vendidos</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Docente verificado</a></li>
+            <li><a href="#" class="block text-gray-800 font-semibold text-base px-4 py-3 rounded-lg hover:bg-gray-200 transition">Con opiniones recientes</a></li>
+          </ul>
+        </div>
+
+      
+
+      </div>
+
+    </aside>
+
+    <main class="w-full lg:w-5/6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 p-4 sm:p-6 lg:p-8">
+
+      <a href="#" class="block">
+        <div data-id="1" onclick="abrirPopup(1)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+     
+        <div class="relative">
+          <img src="https://images.pexels.com/photos/36571389/pexels-photo-36571389.jpeg"  
+          class="w-full h-48 object-cover rounded-t-lg">
+  
+          <div class="absolute top-3 left-3 bg-orange-400 text-white text-xm font-semibold px-3 py-1 rounded-lg">
+           Más vendido
+          </div>
+        </div>
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Programación desde cero: HTML, CSS y JavaScript</h3>
+            <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span class="font-semibold text-sm">4.8</span>
+              <span class="text-gray-400 text-sm">(50,421)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 80,920</span>
+              <span>🕐 9h 15min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Intermedio</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$45.00</span>
+              <span class=" text-2xl text-gray-500 line-through">$89.00</span>
+              <span class="text-xl bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">50% OFF</span>
+            </div>
+      
+            
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/1200x/da/84/d0/da84d096cbf0fb0c707d7d67483995ef.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Ana García</span>
+          </div>
+
+
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="2" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://images.pexels.com/photos/6424585/pexels-photo-6424585.jpeg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">React y TypeScript: Desarrollo Web Moderno</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★★</span>
+              <span class="font-semibold text-sm">4.9</span>
+              <span class="text-gray-400 text-sm">(2,185)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 15,300</span>
+              <span>🕐 18h 40min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Avanzado</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$70.00</span>
+            </div>
+
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/736x/6e/63/9f/6e639f47ecb930baeb9caa6c16fbbc93.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Jose Peralta</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="3" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/1200x/3d/4f/4b/3d4f4b7519fda9598a04dab9ea9b2450.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Python para Data Science y Machine Learning</h3>
+             <div class="flex items-center gap-1">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span class="font-semibold text-sm">4.7</span>
+              <span class="text-gray-400 text-sm">(1,842)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 6,780</span>
+              <span>🕐 7h 20min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Principiante</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$60.00</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/1200x/4d/54/ec/4d54ec2ec2f1b7569520b58a57b0c9c4.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Agustin López</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="4" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/1200x/c3/b8/82/c3b882d08c3b09751526b7587b11f857.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Diseño UX/UI: De Principiante a Profesional</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span class="font-semibold text-sm">4.6</span>
+              <span class="text-gray-400 text-sm">(987)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 21,640</span>
+              <span>🕐 14h 10min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Intermedio</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$20.00</span>
+              <span class=" text-2xl text-gray-500 line-through">$65.00</span>
+              <span class="text-xl bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">69% OFF</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/736x/a3/e3/6c/a3e36c27c8cd4931c4bec4c499fe90fa.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Hernan Rodriguez</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="5" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/1200x/0f/b6/c0/0fb6c0ba204db5947155007d4e4b9f15.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Node.js y Express: Backend con JavaScript</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★★</span>
+              <span class="font-semibold text-sm">4.9</span>
+              <span class="text-gray-400 text-sm">(4,120)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥  4,215</span>
+              <span>🕐 5h 45min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Intermedio</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$30.00</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/736x/12/5b/6d/125b6d2998fe9bd52032a70a3ccceabc.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Joaquin Martínez</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="6" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/736x/2f/00/e8/2f00e8df27343b70a7cda1d72e598f59.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">SQL y Bases de Datos desde Cero</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span class="font-semibold text-sm">4.5</span>
+              <span class="text-gray-400 text-sm">(756)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 10,870</span>
+              <span>🕐 11h 05min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Intermedio</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$70.00</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/736x/92/a7/04/92a704758c9f32611c82a55243b1f4b7.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Carlos Fernández</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="7" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/736x/b9/71/50/b97150a4142f095f1723c4a118ab3363.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Marketing Digital: Estrategias Completas 2026</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★★☆</span>
+              <span class="font-semibold text-sm">4.8</span>
+              <span class="text-gray-400 text-sm">(1,309)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥  3,950</span>
+              <span>🕐 22h 30min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Intermedio</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">$80.00</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/1200x/04/d4/eb/04d4ebb097bcaf6b25252dc28da4a678.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Maria Gonzalez</span>
+          </div>
+
+        </div>
+      </a>
+
+      <a href="#" class="block">
+        <div data-id="8" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full">
+          
+          <img src="https://i.pinimg.com/736x/f4/86/44/f486444ccba15c8956837af4c28155e1.jpg" 
+              class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
+
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Java Avanzado: Arquitectura y Microservicios</h3>
+             <div class="flex items-center gap-1 py-2">
+              <span class="text-yellow-400">★★★☆☆</span>
+              <span class="font-semibold text-sm">3.9</span>
+              <span class="text-gray-400 text-sm">(421)</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-500 ">
+              <span>👥 13,400</span>
+              <span>🕐 13h 40min</span>
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium">Avanzado</span>
+            </div>
+            <div class="flex items-center gap-5 text-sm mt-2 py-2">
+              <span class="font-bold text-3xl">75.00</span>
+            </div>
+          </div>
+
+          <div class="flex items-center py-3">
+            <img src="https://i.pinimg.com/736x/23/49/3a/23493ad5162d21c0b0bec4876bb75f44.jpg" 
+            class="w-10 h-10 rounded-full object-cover mx-2">
+            <span>Esteban Ramirez</span>
+          </div>
+
+        </div>
+      </a>
+
+    </main>
+
+  </div>
+<div id="popup" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
+    <div class="bg-gray-100 w-full max-w-3xl max-h-screen overflow-y-auto flex-col flex justify-center items-center rounded-3xl relative">
+        
+        <button onclick="cerrarPopup()" class="absolute top-3 right-3 z-10 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-600">
+            ✕
+        </button>
+
+        <article class="relative w-full font-serif">
+            
+            <img  src="https://images.freejpg.com.ar/400/0904/coding-programming-code-sublime-text-work-computer-F100018611.jpg" class="shadow rounded-t-3xl rounded-b-xl w-full h-64">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl rounded-b-xl"></div>
+            
+            <div class="absolute bottom-0 left-0 p-7 text-left">
+                <h2 class="text-white font-bold text-2xl">
+                    Programación desde cero: HTML, CSS y JavaScript
+                </h2>
+                <p class="text-gray-200 py-1 mb-3 text-base">
+                    Aprende a programar desde cero con HTML, CSS y JavaScript.
+                </p>
+                <div class="flex items-center gap-2 text-white flex-wrap">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/003/279/509/small/east-asian-teacher-photo.JPG" class="rounded-full w-10 h-10 object-cover shadow">
+                    <p>Profesora: Ana García</p>
+                    <p>⭐ 4.8 (3,421 valoraciones)</p>
+                    <p>👥 12,450 estudiantes</p>
+                </div>
+            </div>
+
+        </article>
+
+        <div class="w-full p-6">
+            <ul id="popup-lista" class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-left">
+                <li>✔ Fundamentos de HTML5 y estructura de páginas web</li>
+                <li>✔ Estilos avanzados con CSS3 y Flexbox/Grid</li>
+                <li>✔ JavaScript desde cero hasta nivel intermedio</li>
+                <li>✔ Crear proyectos reales y funcionales</li>
+                <li>✔ Buenas prácticas de desarrollo web</li>
+                <li>✔ Responsive design para móviles y tablets</li>
+            </ul>
+        </div>
+
+        <div class="w-full px-6 pb-6">
+            <button onclick="abrirPopupCompra()" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-700">
+                Comprar ahora — $45.00
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+      <!-- cierre del popup de detalle -->
+
+    <!-- Popup de compra -->
+    <div id="popup-compra" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
+        <div class="bg-white w-full max-w-lg rounded-3xl p-8">
+            
+            <h2 class="text-2xl font-bold mb-6">Completá tu compra</h2>
+
+            <div class="flex flex-col gap-4">
+                <input type="text" placeholder="Nombre" class="border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <input type="text" placeholder="Apellido" class="border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <input type="email" placeholder="Correo electrónico" class="border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <input type="number" placeholder="DNI" class="border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+            </div>
+
+            <p class="font-semibold mt-6 mb-3">Método de pago</p>
+            <div class="flex gap-4">
+                <button class="flex-1 border-2 border-gray-300 rounded-xl py-3 font-semibold hover:border-gray-900">💳 Tarjeta</button>
+                <button class="flex-1 border-2 border-gray-300 rounded-xl py-3 font-semibold hover:border-gray-900">
+                  <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.19.5/mercadopago/logo__large@2x.png"
+                    class="h-6 mx-auto"> 
+                </button>
+            </div>
+
+            <button class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl mt-6 hover:bg-gray-700">
+                Confirmar compra
+            </button>
+
+
+            <button onclick="cerrarPopupCompra()" class="w-full text-gray-500 text-sm mt-3 hover:text-gray-900">
+              Cancelar
+            </button>
+            
+
+        </div>
+    </div>
+
+    
+<script src="script.js"></script>
+</body>
+</html>
