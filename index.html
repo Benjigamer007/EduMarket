@@ -387,7 +387,7 @@
 
 <!-- popup de detalle -->
 <div id="popup" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
-    <div class="bg-gray-100 w-full max-w-3xl max-h-screen overflow-y-auto flex-col flex justify-center items-center rounded-3xl relative">
+    <div class="bg-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto flex-col flex justify-center items-center rounded-3xl relative">
         
         <button onclick="cerrarPopup()" class="absolute top-3 right-3 z-10 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-600">
             ✕
@@ -411,6 +411,7 @@
                     <p>Profesora: Ana García</p>
                     <p>⭐ 4.8 (3,421 valoraciones)</p>
                     <p>👥 12,450 estudiantes</p>
+                    <span class="bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 mt-1 rounded-full">✔ Docente verificado</span>
                 </div>
             </div>
 
@@ -504,7 +505,7 @@
                 </button>
             </div>
 
-            <button class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl mt-6 hover:bg-gray-700">
+            <button onclick="confirmarCompra()"class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl mt-6 hover:bg-gray-700">
                 Confirmar compra
             </button>
 

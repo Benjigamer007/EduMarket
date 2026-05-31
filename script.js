@@ -127,3 +127,8 @@ buscador.addEventListener('input', function() {
         }
     })
 })
+
+function confirmarCompra(){
+    alert("Compra confirmada! Gracias por tu compra.")
+    cerrarPopupCompra()
+}
