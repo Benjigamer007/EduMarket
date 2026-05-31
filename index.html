@@ -113,7 +113,7 @@
      
         <div class="relative">
           <img src="https://images.pexels.com/photos/36571389/pexels-photo-36571389.jpeg"  
-          class="w-full h-48 object-cover rounded-t-lg">
+          class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
   
           <div class="absolute top-3 left-3 bg-orange-400 text-white text-xm font-semibold px-3 py-1 rounded-lg">
            Más vendido
@@ -153,7 +153,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="2" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
+        <div data-id="2" onclick="abrirPopup(2)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
           
           <img src="https://images.pexels.com/photos/6424585/pexels-photo-6424585.jpeg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -186,7 +186,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="3" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col  ">
+        <div data-id="3" onclick="abrirPopup(3)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col  ">
           
           <img src="https://i.pinimg.com/1200x/3d/4f/4b/3d4f4b7519fda9598a04dab9ea9b2450.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -218,7 +218,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="4" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col ">
+        <div data-id="4" onclick="abrirPopup(4)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col ">
           
           <img src="https://i.pinimg.com/1200x/c3/b8/82/c3b882d08c3b09751526b7587b11f857.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -252,7 +252,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="5" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
+        <div data-id="5" onclick="abrirPopup(5)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
           
           <img src="https://i.pinimg.com/1200x/0f/b6/c0/0fb6c0ba204db5947155007d4e4b9f15.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -284,7 +284,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="6" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col"> 
+        <div data-id="6" onclick="abrirPopup(6)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col"> 
           
           <img src="https://i.pinimg.com/736x/2f/00/e8/2f00e8df27343b70a7cda1d72e598f59.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -316,7 +316,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="7" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
+        <div data-id="7" onclick="abrirPopup(7)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
           
           <img src="https://i.pinimg.com/736x/b9/71/50/b97150a4142f095f1723c4a118ab3363.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -348,7 +348,7 @@
       </a>
 
       <a href="#" class="block">
-        <div data-id="8" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
+        <div data-id="8" onclick="abrirPopup(8)" class="bg-white rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
           
           <img src="https://i.pinimg.com/736x/f4/86/44/f486444ccba15c8956837af4c28155e1.jpg" 
               class="w-full h-48 sm:h-56 object-cover rounded-t-lg">
@@ -389,28 +389,28 @@
 <div id="popup" class="hidden bg-black/70 inset-0 fixed flex items-center justify-center z-50">
     <div class="bg-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto flex-col flex justify-center items-center rounded-3xl relative">
         
-        <button onclick="cerrarPopup()" class="absolute top-3 right-3 z-10 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-600">
+        <button  onclick="cerrarPopup()" class="absolute top-3 right-3 z-10 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-600">
             ✕
         </button>
 
         <article class="relative w-full font-serif">
             
-            <img  src="https://images.freejpg.com.ar/400/0904/coding-programming-code-sublime-text-work-computer-F100018611.jpg" class="shadow rounded-t-3xl rounded-b-xl w-full h-64">
+            <img id="popup-imagen" src="https://images.freejpg.com.ar/400/0904/coding-programming-code-sublime-text-work-computer-F100018611.jpg" class="shadow rounded-t-3xl rounded-b-xl w-full h-64">
             
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-2xl rounded-b-xl"></div>
             
             <div class="absolute bottom-0 left-0 p-7 text-left">
-                <h2 class="text-white font-bold text-2xl">
+                <h2 id="popup-titulo" class="text-white font-bold text-2xl">
                     Programación desde cero: HTML, CSS y JavaScript
                 </h2>
-                <p class="text-gray-200 py-1 mb-3 text-base">
+                <p id="popup-descripcion" class="text-gray-200 py-1 mb-3 text-base">
                     Aprende a programar desde cero con HTML, CSS y JavaScript.
                 </p>
                 <div class="flex items-center gap-2 text-white flex-wrap">
-                    <img src="https://i.pinimg.com/1200x/da/84/d0/da84d096cbf0fb0c707d7d67483995ef.jpg" class="rounded-full w-10 h-10 object-cover shadow">
-                    <p>Profesor: Alonso Fernandez</p>
-                    <p>⭐ 4.8 (3,421 valoraciones)</p>
-                    <p>👥 12,450 estudiantes</p>
+                    <img id="popup-profesor-imagen" src="https://i.pinimg.com/1200x/da/84/d0/da84d096cbf0fb0c707d7d67483995ef.jpg" class="rounded-full w-10 h-10 object-cover shadow">
+                    <p id="popup-profesor">Profesor: Alonso Fernandez</p>
+                    <p id="popup-valoracion">⭐ 4.8 (3,421 valoraciones)</p>
+                    <p id="popup-estudiantes">👥 12,450 estudiantes</p>
                     <span class="bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 mt-1 rounded-full">✔ Docente verificado</span>
                 </div>
             </div>
@@ -431,7 +431,7 @@
       
 
         <div class="w-full px-6 pb-6">
-            <button onclick="abrirPopupCompra()" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-700">
+            <button id="popup-precio" onclick="abrirPopupCompra()" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-700">
                 Comprar ahora — $45.00
             </button>
         </div>
